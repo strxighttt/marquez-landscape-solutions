@@ -1,430 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marquez Landscape Solutions | Professional Landscape Services</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      color: #1F2937;
-      background: #FFFFFF;
-      line-height: 1.6;
-    }
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marquez Landscape Solutions | Silver Spring, MD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --forest: #0D3B2E; --forest-light: #145A47; --gold: #D4A343; --gold-light: #E2B95F; --cream: #FDF8F0; --white: #FFFFFF; --gray-100: #F4F7F5; --gray-600: #6B7A72; --gray-900: #1A2E25; --shadow: 0 4px 20px rgba(13,59,46,0.08); --shadow-lg: 0 8px 40px rgba(13,59,46,0.12); --radius: 8px; }
 
-    nav {
-      background: #FFFFFF;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-      position: sticky; top: 0; z-index: 100;
-      padding: 0 24px;
-    }
-    .nav-inner {
-      max-width: 1140px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 72px;
-    }
-    .nav-logo { font-weight: 700; font-size: 1.25rem; color: #059669; letter-spacing: -0.3px; }
-    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
-    .nav-links a { font-size: 0.9rem; font-weight: 500; color: #4B5563; transition: color 0.2s; }
-    .nav-links a:hover { color: #059669; }
-    .nav-cta {
-      background: #059669; color: #fff; padding: 10px 22px; border-radius: 12px;
-      font-weight: 500; font-size: 0.85rem; transition: background 0.2s;
-    }
-    .nav-cta:hover { background: #047857; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { width: 24px; height: 2px; background: #1F2937; border-radius: 2px; }
+body { font-family: 'DM Sans', sans-serif; color: var(--gray-900); line-height: 1.7; background: var(--white); }
 
-    .hero {
-      padding: 0 24px;
-      background: #FFFFFF;
-    }
-    .hero-grid {
-      max-width: 1140px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-      align-items: center; min-height: 80vh; padding: 40px 0;
-    }
-    .hero-left h1 {
-      font-size: 2.75rem; font-weight: 700; line-height: 1.1; color: #1F2937; margin-bottom: 16px;
-    }
-    .hero-left p {
-      font-size: 1.1rem; color: #6B7280; max-width: 480px; margin-bottom: 32px;
-    }
-    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn-primary {
-      background: #059669; color: #fff; padding: 14px 32px; border-radius: 12px;
-      font-weight: 500; font-size: 0.95rem; transition: background 0.2s;
-    }
-    .btn-primary:hover { background: #047857; }
-    .btn-outline {
-      border: 2px solid #059669; color: #059669; padding: 12px 30px; border-radius: 12px;
-      font-weight: 500; font-size: 0.95rem; transition: all 0.2s;
-    }
-    .btn-outline:hover { background: #059669; color: #fff; }
-    .hero-right {
-      background: linear-gradient(135deg, #059669 0%, #10B981 100%);
-      border-radius: 24px; min-height: 400px;
-      display: flex; align-items: center; justify-content: center;
-      transform: rotate(2deg) scale(0.97);
-      box-shadow: 0 12px 40px rgba(5,150,105,0.2);
-    }
-    .hero-right-inner {
-      transform: rotate(-2deg);
-    }
-    .hero-right-inner i {
-      font-size: 5rem; color: rgba(255,255,255,0.2);
-    }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(5,150,105,0.1); color: #059669;
-      padding: 6px 16px; border-radius: 100px;
-      font-size: 0.8rem; font-weight: 500; margin-bottom: 20px;
-    }
+h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 600; }
 
-    section { padding: 80px 24px; }
-    .section-title {
-      text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 8px; color: #1F2937;
-    }
-    .section-sub {
-      text-align: center; color: #6B7280; font-size: 1rem; margin-bottom: 48px;
-    }
+/* NAV */
+nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid rgba(13,59,46,0.08); padding: 0 24px; }
+.nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.nav-logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.25rem; color: var(--forest); }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--gray-600); font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+.nav-links a:hover { color: var(--forest); }
+.nav-cta { background: var(--gold); color: var(--gray-900) !important; padding: 10px 24px; border-radius: var(--radius); font-weight: 700 !important; }
+.nav-cta:hover { background: var(--gold-light) !important; color: var(--gray-900) !important; }
 
-    #services { background: #F0FDF4; }
-    .services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    }
-    .service-card {
-      background: #FFFFFF; border-radius: 12px; padding: 32px 24px;
-      border-top: 4px solid #059669;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .service-card:hover { box-shadow: 0 8px 24px rgba(5,150,105,0.1); transform: translateY(-3px); }
-    .service-card i { font-size: 1.75rem; color: #059669; margin-bottom: 14px; }
-    .service-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: #1F2937; }
-    .service-card p { font-size: 0.9rem; color: #6B7280; line-height: 1.5; }
+/* MOBILE BAR */
+.mobile-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--forest); padding: 10px 24px; justify-content: space-around; align-items: center; }
+.mobile-bar a { color: var(--white); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; }
+.mobile-bar .divider { width: 1px; height: 24px; background: rgba(255,255,255,0.2); }
 
-    #about { background: #F0FDF4; }
-    .about-centered {
-      max-width: 700px; margin: 0 auto; text-align: center;
-    }
-    .about-centered h2 { font-size: 2rem; margin-bottom: 16px; }
-    .about-centered p { color: #6B7280; line-height: 1.7; font-size: 1rem; }
+/* HERO */
+.hero { position: relative; min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 100px 24px; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,59,46,0.85) 0%, rgba(13,59,46,0.65) 100%); }
+.hero-content { position: relative; z-index: 1; max-width: 720px; }
+.hero-content h1 { font-size: clamp(2.8rem, 5.5vw, 4.2rem); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 10px; }
+.hero-content h1 span { color: var(--gold); }
+.hero-content .sub { font-size: 1.15rem; color: rgba(255,255,255,0.8); margin-bottom: 32px; font-weight: 400; }
+.hero-btn { display: inline-block; background: var(--gold); color: var(--gray-900); text-decoration: none; padding: 16px 44px; border-radius: var(--radius); font-weight: 700; font-size: 1rem; transition: all 0.2s; }
+.hero-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(212,163,67,0.3); }
 
-    .process-row {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; align-items: center; position: relative;
-    }
-    .process-step { text-align: center; }
-    .process-num {
-      display: flex; align-items: center; justify-content: center;
-      width: 52px; height: 52px; border-radius: 50%;
-      background: #059669; color: #fff; font-weight: 700; font-size: 1.2rem;
-      margin: 0 auto 16px;
-    }
-    .process-step h4 { font-size: 1rem; margin-bottom: 6px; }
-    .process-step p { font-size: 0.9rem; color: #6B7280; }
-    .process-arrow { display: flex; align-items: center; justify-content: center; color: #059669; font-size: 1.5rem; }
+/* SECTION HEADERS */
+.section-header { text-align: center; margin-bottom: 48px; }
+.section-header h2 { font-size: 2.2rem; font-weight: 600; color: var(--forest); margin-bottom: 8px; }
+.section-header p { color: var(--gray-600); max-width: 540px; margin: 0 auto; font-size: 0.95rem; }
 
-    #testimonials { background: #FFFFFF; }
-    .test-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-    }
-    .test-card {
-      background: #F0FDF4; border-radius: 12px; padding: 28px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-    }
-    .test-stars { margin-bottom: 10px; }
-    .test-stars i { color: #D1D5DB; font-size: 0.95rem; margin-right: 2px; }
-    .test-text { font-size: 0.95rem; color: #4B5563; line-height: 1.6; margin-bottom: 12px; font-style: italic; }
-    .test-name { font-weight: 500; font-size: 0.85rem; color: #6B7280; }
+/* SECTION */
+section { padding: 90px 24px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
 
-    #contact { background: #FFFFFF; }
-    .contact-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-    }
-    .contact-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
-    .chip {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: #F0FDF4; color: #059669; padding: 10px 18px; border-radius: 100px;
-      font-weight: 500; font-size: 0.9rem;
-    }
-    .chip i { font-size: 0.85rem; }
-    .contact-form { display: flex; flex-direction: column; gap: 16px; }
-    .contact-form input, .contact-form textarea {
-      padding: 12px 16px; border: 1px solid #D1D5DB; border-radius: 12px;
-      font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none; transition: border 0.2s;
-    }
-    .contact-form input:focus, .contact-form textarea:focus { border-color: #059669; }
-    .contact-form textarea { min-height: 120px; resize: vertical; }
-    .contact-form button {
-      background: #059669; color: #fff; padding: 14px; border: none; border-radius: 12px;
-      font-weight: 500; font-size: 0.95rem; cursor: pointer; transition: background 0.2s;
-    }
-    .contact-form button:hover { background: #047857; }
-    .contact-info h3 { font-size: 1.5rem; margin-bottom: 16px; }
-    .contact-info p { color: #6B7280; margin-bottom: 8px; font-size: 0.95rem; }
+/* SERVICES */
+.services { background: var(--gray-100); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service-card { background: var(--white); border-radius: var(--radius); padding: 32px 24px; box-shadow: var(--shadow); border-left: 4px solid var(--gold); transition: transform 0.2s, box-shadow 0.2s; }
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-card .icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+.service-card h3 { font-size: 1.2rem; font-weight: 600; color: var(--forest); margin-bottom: 10px; }
+.service-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; }
 
-    footer {
-      background: #059669; color: rgba(255,255,255,0.9); padding: 60px 24px 32px;
-    }
-    .footer-grid {
-      max-width: 1140px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
-    }
-    .footer-col h4 { font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 16px; }
-    .footer-col p, .footer-col a { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.8; display: block; }
-    .footer-col a:hover { color: #fff; }
-    .footer-bottom {
-      max-width: 1140px; margin: 0 auto; padding-top: 32px; margin-top: 32px;
-      border-top: 1px solid rgba(255,255,255,0.15);
-      text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.55);
-    }
+/* ABOUT */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.about-image { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); }
+.about-image img { width: 100%; height: 400px; object-fit: cover; display: block; }
+.about-text h2 { font-size: 2.2rem; font-weight: 600; color: var(--forest); margin-bottom: 16px; }
+.about-text h2 span { color: var(--gold); }
+.about-text p { color: var(--gray-600); margin-bottom: 14px; font-size: 0.95rem; }
+.about-text .sig { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--forest); margin-top: 20px; font-size: 1rem; }
 
-    .float-quote {
-      position: fixed; bottom: 24px; right: 24px; z-index: 99;
-      background: #059669; color: #fff; padding: 14px 24px; border-radius: 12px;
-      display: flex; align-items: center; gap: 10px;
-      font-weight: 500; font-size: 0.95rem;
-      box-shadow: 0 4px 16px rgba(5,150,105,0.35);
-      transition: transform 0.2s;
-    }
-    .float-quote:hover { transform: translateY(-2px); }
-    .float-quote i { font-size: 1.1rem; }
+/* PROCESS */
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.process-step { background: var(--white); border-radius: var(--radius); padding: 28px 20px; text-align: center; box-shadow: var(--shadow); border-bottom: 3px solid var(--gold); }
+.step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--forest); color: var(--white); font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-family: 'DM Sans', sans-serif; }
+.process-step h3 { font-size: 1.05rem; font-weight: 600; color: var(--forest); margin-bottom: 8px; }
+.process-step p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.5; }
 
-    @media (max-width: 768px) {
-      .hamburger { display: flex; }
-      .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px 24px; gap: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-      .nav-links.open { display: flex; }
-      .nav-cta-wrap { display: none; }
-      .hero-grid { grid-template-columns: 1fr; min-height: auto; padding: 60px 0 40px; }
-      .hero-left h1 { font-size: 2rem; }
-      .hero-right { min-height: 240px; transform: none; }
-      .hero-right-inner { transform: none; }
-      .services-grid, .test-grid, .process-row { grid-template-columns: 1fr; }
-      .process-arrow { display: none; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .float-quote { bottom: 16px; right: 16px; font-size: 0.85rem; padding: 12px 18px; }
-    }
-  </style>
+/* REVIEWS */
+.reviews { background: var(--gray-100); }
+.reviews-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.review-card { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); position: relative; }
+.review-card .stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 12px; }
+.review-card blockquote { font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 16px; }
+.review-card cite { font-size: 0.85rem; font-weight: 600; color: var(--forest); font-style: normal; }
+
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.contact-info h3 { font-size: 1.5rem; font-weight: 600; color: var(--forest); margin-bottom: 16px; }
+.contact-info p { color: var(--gray-600); margin-bottom: 6px; font-size: 0.95rem; }
+.contact-info .info-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+.contact-info .info-item .label { font-weight: 600; color: var(--forest); min-width: 70px; }
+.contact-form { display: flex; flex-direction: column; gap: 14px; }
+.contact-form input, .contact-form textarea { padding: 14px 16px; border: 1px solid rgba(13,59,46,0.12); border-radius: var(--radius); font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--gray-900); background: var(--white); transition: border 0.2s; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212,163,67,0.1); }
+.contact-form textarea { min-height: 120px; resize: vertical; }
+.contact-form button { background: var(--gold); color: var(--gray-900); border: none; padding: 14px 36px; border-radius: var(--radius); font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: background 0.2s; font-family: 'DM Sans', sans-serif; align-self: flex-start; }
+.contact-form button:hover { background: var(--gold-light); }
+
+/* FOOTER */
+footer { background: var(--forest); color: rgba(255,255,255,0.85); padding: 40px 24px 80px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-inner p { font-size: 0.85rem; }
+.footer-inner a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.footer-inner a:hover { color: var(--gold); }
+.footer-links { display: flex; gap: 24px; }
+
+@media (max-width: 900px) {
+  .hero { min-height: 60vh; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .mobile-bar { display: flex; }
+  footer { padding-bottom: 70px; }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .hero-content h1 { font-size: 2rem; }
+  .section-header h2 { font-size: 1.6rem; }
+}
+</style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-logo">Marquez Landscape Solutions</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-cta-wrap"><a href="#contact" class="nav-cta">Free Quote</a></div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Marquez<span> Landscape Solutions</span></div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <span class="hero-badge"><i class="fas fa-check-circle"></i> Trusted. Reliable. Local.</span>
-        <h1>Professional Landscape Services</h1>
-        <p>Full-service landscaping for homes and businesses in the metro area. Free estimates, quality work, reliable crew.</p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn-primary">Get Free Estimate</a>
-          <a href="#services" class="btn-outline">Our Work</a>
-        </div>
-      </div>
-      <div class="hero-right">
-        <div class="hero-right-inner">
-          <img src="https://picsum.photos/id/121/400/400" alt=" " style="width:100%;height:100%;object-fit:cover;border-radius:50%" />
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://picsum.photos/id/159/1600/900" alt="" loading="lazy">
+  </div>
+  <div class="hero-content">
+    <h1>Your Property<br><span>Deserves Excellence</span></h1>
+    <p class="sub">Full-service landscaping for homes and businesses in Silver Spring, MD. Quality craftsmanship, sustainable practices, outstanding results.</p>
+    <a href="#contact" class="hero-btn">Schedule a Free Consultation</a>
+  </div>
+</section>
 
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">Landscaping Services</h2>
-      <p class="section-sub">Quality work for every season, every yard, every budget</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-cut"></i>
-          <h3>Lawn Care</h3>
-          <p>Regular mowing, trimming, and edging to keep your lawn looking its best week after week.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-truck"></i>
-          <h3>Mulch &amp; Stone</h3>
-          <p>Color-enhancing mulch and decorative stone installation for clean, attractive landscape beds.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-scissors"></i>
-          <h3>Hedge Trimming</h3>
-          <p>Precision trimming and shaping of hedges, bushes, and ornamental shrubs for a polished look.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-broom"></i>
-          <h3>Leaf Removal</h3>
-          <p>Thorough leaf cleanup in fall, plus spring debris removal to keep your property tidy year-round.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-tint"></i>
-          <h3>Power Washing</h3>
-          <p>Restore driveways, walkways, patios, and fences with professional pressure washing services.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-seedling"></i>
-          <h3>Landscape Installation</h3>
-          <p>New bed design, plant selection, and full installation to transform your outdoor space.</p>
-        </div>
-      </div>
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>What We Offer</h2>
+      <p>Comprehensive landscaping services tailored to your needs</p>
     </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <div class="about-centered">
-        <h2>About Marquez Landscape Solutions</h2>
-        <p>We&rsquo;re a local landscaping company focused on delivering high-quality results at fair prices. Every yard we touch gets the same attention to detail — clean lines, reliable scheduling, and honest communication. From routine mowing to full landscape installations, we treat your property with the same care we&rsquo;d give our own.</p>
-      </div>
+    <div class="services-grid">
+      <div class="service-card"><span class="icon">🌿</span><h3>Landscape Design</h3><p>Creative, sustainable garden plans blending native plants with curated ornamental species for year-round beauty.</p></div>
+      <div class="service-card"><span class="icon">🏗️</span><h3>Hardscaping</h3><p>Patios, walkways, retaining walls, and driveways using premium stone, pavers, and concrete.</p></div>
+      <div class="service-card"><span class="icon">🌳</span><h3>Tree Services</h3><p>Pruning, removal, stump grinding, and health assessments by certified arborists.</p></div>
+      <div class="service-card"><span class="icon">💧</span><h3>Irrigation Systems</h3><p>Smart sprinkler and drip irrigation design, installation, and maintenance for water efficiency.</p></div>
+      <div class="service-card"><span class="icon">🌱</span><h3>Lawn Care</h3><p>Fertilization, aeration, overseeding, and weed management programs for a thick, green lawn.</p></div>
+      <div class="service-card"><span class="icon">✨</span><h3>Seasonal Services</h3><p>Spring cleanup, mulching, leaf removal, snow plowing, and winterization packages.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section style="background: #FFFFFF;">
-    <div class="container">
-      <h2 class="section-title">How It Works</h2>
-      <p class="section-sub">Simple steps to a better yard</p>
-      <div class="process-row">
-        <div class="process-step">
-          <div class="process-num">1</div>
-          <h4>Free Estimate</h4>
-          <p>We meet you on-site, assess your property, and provide a clear, no-obligation quote.</p>
-        </div>
-        <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="process-num">2</div>
-          <h4>Schedule Service</h4>
-          <p>Pick a date and time that works for you. We arrive on schedule, every time.</p>
-        </div>
-        <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="process-num">3</div>
-          <h4>We Transform Your Yard</h4>
-          <p>Our crew handles the work start to finish — leaving your property clean, tidy, and transformed.</p>
-        </div>
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Crafted with <span>Purpose</span>,<br>Built to Last</h2>
+        <p>Marquez Landscape Solutions is a family-owned business dedicated to transforming outdoor spaces in the Silver Spring community. We combine horticultural expertise with construction precision to deliver landscapes that thrive.</p>
+        <p>Our team of licensed, insured professionals approaches every project with integrity, transparency, and a genuine passion for the craft. We don't just build landscapes — we build relationships that grow season after season.</p>
+        <p class="sig">— The Marquez Team</p>
       </div>
+      <div class="about-image"><img src="https://picsum.photos/seed/marquez-about/640/480" alt="Marquez Landscape team" loading="lazy"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="testimonials">
-    <div class="container">
-      <h2 class="section-title">Client Feedback</h2>
-      <p class="section-sub">Reviews from homeowners we&rsquo;ve served</p>
-      <div class="test-grid">
-        <div class="test-card">
-          <div class="test-stars">
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </div>
-          <p class="test-text">&ldquo;Share your experience here &mdash; add a real client testimonial.&rdquo;</p>
-          <p class="test-name">&mdash; [Client Name]</p>
-        </div>
-        <div class="test-card">
-          <div class="test-stars">
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </div>
-          <p class="test-text">&ldquo;Share your experience here &mdash; add a real client testimonial.&rdquo;</p>
-          <p class="test-name">&mdash; [Client Name]</p>
-        </div>
-      </div>
+<section class="services" id="process">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>How We Work</h2>
+      <p>A straightforward process from start to finish</p>
     </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <p class="section-sub">Free estimates &mdash; call or message us today</p>
-      <div class="contact-grid">
-        <div>
-          <div class="contact-chips">
-            <span class="chip"><i class="fas fa-phone-alt"></i> (240) 702-5557</span>
-            <span class="chip"><i class="fas fa-envelope"></i> info@mmarquezlandscapesolutions.com</span>
-            <span class="chip"><i class="fas fa-map-pin"></i> Metro Area</span>
-            <span class="chip"><i class="fas fa-shield-alt"></i> Licensed &amp; Insured</span>
-          </div>
-          <div class="contact-info">
-            <p style="margin-bottom: 12px; line-height: 1.7;">Call, email, or fill out the form. We typically respond within a few hours during business hours.</p>
-            <p><strong style="color: #1F2937;">Hours:</strong> Mon &ndash; Fri 7:00 AM &ndash; 6:00 PM, Sat 8:00 AM &ndash; 2:00 PM</p>
-          </div>
-        </div>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required>
-          <input type="tel" placeholder="Phone Number" required>
-          <input type="text" placeholder="What service are you looking for?">
-          <textarea placeholder="Brief description of your project..."></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-      <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA9NhogTk8ZLk4Tjon1JURr9XHBEOgd5T8&q=Marquez+Landscape+Solutions+Silver+Spring+MD" width="100%" height="260" style="border:0;border-radius:12px;margin-top:16px" allowfullscreen="" loading="lazy"></iframe>
+    <div class="process-steps">
+      <div class="process-step"><div class="step-num">1</div><h3>Consult</h3><p>Free on-site assessment to understand your vision, budget, and timeline.</p></div>
+      <div class="process-step"><div class="step-num">2</div><h3>Plan</h3><p>Detailed proposal with designs, material options, and a transparent cost estimate.</p></div>
+      <div class="process-step"><div class="step-num">3</div><h3>Execute</h3><p>Professional installation by our experienced crew with minimal disruption.</p></div>
+      <div class="process-step"><div class="step-num">4</div><h3>Support</h3><p>Ongoing maintenance and follow-up to ensure your landscape stays beautiful.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Marquez Landscape Solutions</h4>
-        <p>Trusted. Reliable. Local. &mdash; Professional landscaping for residential and commercial properties in the metro area.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="#">Lawn Care</a>
-        <a href="#">Mulch &amp; Stone</a>
-        <a href="#">Hedge Trimming</a>
-        <a href="#">Leaf Removal</a>
-        <a href="#">Power Washing</a>
-        <a href="#">Landscape Installation</a>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="tel:12407025557">(240) 702-5557</a>
-        <p>info@mmarquezlandscapesolutions.com</p>
-        <p>mmarquezlandscapesolutions.com</p>
-        <p>Metro Area</p>
-        <p style="margin-top: 8px;">Licensed &amp; Insured &bull; Free Estimates</p>
-      </div>
+<section class="reviews" id="reviews">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Hear From Our Clients</h2>
+      <p>Real feedback from real neighbors</p>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Marquez Landscape Solutions. All rights reserved.
+    <div class="reviews-grid">
+      <div class="review-card"><div class="stars">★★★★★</div><blockquote>"Marquez transformed our overgrown yard into a beautiful outdoor living space. Professional, on-time, and fair pricing."</blockquote><cite>— Angela T., Silver Spring</cite></div>
+      <div class="review-card"><div class="stars">★★★★★</div><blockquote>"They installed a full irrigation system and new sod. Our lawn has never looked better. Highly recommend!"</blockquote><cite>— Kevin R., Burtonsville</cite></div>
+      <div class="review-card"><div class="stars">★★★★★</div><blockquote>"We hired them for a complete backyard redesign. The team was communicative, clean, and the results are stunning."</blockquote><cite>— Lisa M., Colesville</cite></div>
+      <div class="review-card"><div class="stars">★★★★★</div><blockquote>"Reliable, skilled, and honest. They handle our commercial property and the quality is always top-notch."</blockquote><cite>— Brian C., Takoma Park</cite></div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <a href="tel:12407025557" class="float-quote">
-    <i class="fas fa-phone-alt"></i> (240) 702-5557
-  </a>
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Get in Touch</h2>
+      <p>Ready to transform your outdoor space? Let's talk.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <div class="info-item"><span class="label">Location</span><span>Silver Spring, MD</span></div>
+        <div class="info-item"><span class="label">Phone</span><span>(555) 123-4567</span></div>
+        <div class="info-item"><span class="label">Email</span><span>info@marquezlandscapesolutions.com</span></div>
+      </div>
+      <form class="contact-form" action="#">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <textarea name="message" placeholder="How can we help you?" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
 
-  <script>
-    document.getElementById('hamburger').addEventListener('click', function() {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-  </script>
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 Marquez Landscape Solutions. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+15551234567">&#9742; Call (555) 123-4567</a>
+  <span class="divider"></span>
+  <a href="sms:+15551234567">&#9993; Text Us</a>
+</div>
+
 </body>
 </html>
